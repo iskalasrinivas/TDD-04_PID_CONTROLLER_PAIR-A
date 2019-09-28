@@ -1,7 +1,7 @@
-# Week 5 - PID Controller
-[![Build Status](https://travis-ci.org/RajPShinde/TDD04-PID_Controller_Pair-A.svg?branch=master)](https://travis-ci.org/RajPShinde)
-[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/TDD04-PID_Controller_Pair-A/badge.svg?branch=master&service=github)](https://coveralls.io/github/RajPShinde/TDD04-PID_Controller_Pair-A?branch=master)
----
+# C++ Boilerplate
+[![Build Status](https://travis-ci.org/RajPShinde/TDD-04_PID_CONTROLLER_PAIR-A.svg?branch=master)](https://travis-ci.org/RajPShinde/TDD-04_PID_CONTROLLER_PAIR-A)
+[![Coverage Status](https://coveralls.io/repos/github/RajPShinde/TDD-04_PID_CONTROLLER_PAIR-A/badge.svg?branch=master)](https://coveralls.io/github/RajPShinde/TDD-04_PID_CONTROLLER_PAIR-A?branch=master)
+
 
 ## Authors of Part 1
 
