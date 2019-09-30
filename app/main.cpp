@@ -16,7 +16,6 @@
 #include <iostream>
 #include "pid.hpp"
 
-
 /**
  *  @brief Main function to call methods
  *  @param none
