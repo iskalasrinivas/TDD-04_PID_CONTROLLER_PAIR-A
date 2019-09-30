@@ -5,8 +5,14 @@
 
 ## Authors of Part 1
 
-* **Raj Prakash Shinde** - *Driver* - [GitHub](https://github.com/RajPShinde)
-* **Sandeep Kota Sai Pavan** - *Navigator* - [GitHub](https://github.com/sandeep-kota)
+* **Sandeep Kota Sai Pavan** - *Driver* - [GitHub](https://github.com/sandeep-kota)
+* **Raj Prakash Shinde** - *Navigator* - [GitHub](https://github.com/RajPShinde)
+
+## Authors of Part 2
+
+* **Raja Iskala** - *Driver* - [GitHub](https://github.com/iskalasrinivas)
+* **Yashaarth Todi** - *Navigator* - [GitHub](https://github.com/Ytodi31)
+
 
 ## Overview
 
@@ -30,3 +36,9 @@ Run program: ./app/shell-app
 Design a [PID controller](https://en.wikipedia.org/wiki/PID_controller) to reach a given set point goal from the given actual velocity. Change the compute() method and pass the tests. 
 
 The UML Class and Activity Diagram represents the workflow of the compute method. A proper implementation of the methods will clear the two unit test cases.
+
+
+## TODO List
+
+1) Inputs for kp, ki, kd could have been taken from the user rather than setting a default value
+2) Method for tuning the PID constants could have been added.
