@@ -1,7 +1,11 @@
 /**
  *  @file pid.cpp
- *  @author Raj Prakash Shinde-driver
- *  @author Sandeep Kota Sai Pavan-navigator
+ *  Part - 1
+ *  @author Sandeep Kota Sai Pavan-driver
+ *  @author Raj Prakash Shinde-navigator
+ *  Part - 2
+ *  @author  Raja Iskala - driver
+ *  @author Yashaarth Todi-navigator 
  *  @date 09/25/2019
  *  @version 1.0
  *  @copyright 2019
