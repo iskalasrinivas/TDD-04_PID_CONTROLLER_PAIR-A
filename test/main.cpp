@@ -1,4 +1,6 @@
 /**
+ *  @copyright 2019
+ *  @copyright GNU Public License
  *  @file main.cpp-test
  *  Part - 1
  *  @author Sandeep Kota Sai Pavan-driver
@@ -8,8 +10,6 @@
  *  @author Yashaarth Todi-navigator 
  *  @date 09/25/2019
  *  @version 1.0
- *  @copyright 2019
- *  @copyright GNU Public License
  *  @brief Run google unit tests present in test.cpp 
  */
 

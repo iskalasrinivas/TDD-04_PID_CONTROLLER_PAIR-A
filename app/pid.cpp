@@ -1,4 +1,6 @@
 /**
+ *  @copyright 2019
+ *  @copyright GNU Public License
  *  @file pid.cpp
  *  Part - 1
  *  @author Sandeep Kota Sai Pavan-driver
@@ -8,8 +10,6 @@
  *  @author Yashaarth Todi-navigator
  *  @date 09/25/2019
  *  @version 1.0
- *  @copyright 2019
- *  @copyright GNU Public License
  *  @brief Member function definitions for PidController class 
  */
 
@@ -43,14 +43,14 @@ PidController::~PidController() {}
  *	controller block.
  */
 double PidController::compute(double prevValue, double setPoint) {
-double error=setPoint-prevValue; // Calculate error 
-double Pout=kp_*error; // Calculate the proportional term of error
-integral +=error*dt; 
-double Iout=ki_*integral; // Calculate integral proportional term of error
-derivative=(error-prevError)/dt;
-double Dout=kd_*derivative; // Calculate derivative term of error
-double output=Pout+Iout+Dout; // Calculate total error
-return (prevValue+output);
+double error = setPoint - prevValue;  // Calculate error
+double Pout = kp_ * error;  //  Calculate the proportional term of error
+integral += error * dt;
+double Iout = ki_ * integral;  //  Calculate integral proportional term of error
+derivative = (error - prevError) / dt;
+double Dout = kd_ * derivative;  //  Calculate derivative term of error
+double output = Pout + Iout + Dout;  //  Calculate total error
+return (prevValue + output);
 }
 
 /**
@@ -86,7 +86,7 @@ return kd_;
  *   @return boolean
  */
 bool PidController::setkp(double p) {
-kp_=p;
+kp_ = p;
 return true;
 }
 
@@ -96,7 +96,7 @@ return true;
  *   @return boolean
  */
 bool PidController::setki(double i) {
-ki_=i;
+ki_ = i;
 return true;
 }
 
@@ -106,8 +106,6 @@ return true;
  *   @return boolean
  */
 bool PidController::setkd(double d) {
-kd_=d;
+kd_ = d;
 return true;
 }
-
-
