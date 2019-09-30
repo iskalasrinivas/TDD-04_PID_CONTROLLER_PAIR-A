@@ -23,5 +23,21 @@
  *  @return 0
  */
 int main() {
+PidController o;
+double actualVelocity = 10;
+double target = 30;
+int count = 0;
+int bound = 1;
+std::cout << "p gain :" << o.getkp() << std::endl;
+std::cout << "i gain :" << o.getki() << std::endl;
+std::cout << "d gain :" << o.getkd() << std::endl;
+std::cout << "dt gain:" << o.dt << std::endl;
+//  Check convergance of the designed controller
+while(abs(actualVelocity - target) > bound) {
+actualVelocity = o.compute(actualVelocity, target);
+count++;
+}
+std::cout << "New velocity: " << actualVelocity << " achieved in "
+<< count << " cycles" << std::endl;
 return 0;
 }
