@@ -5,7 +5,7 @@
  *  @author Raj Prakash Shinde-navigator
  *  Part - 2
  *  @author  Raja Iskala - driver
- *  @author Yashaarth Todi-navigator 
+ *  @author Yashaarth Todi-navigator
  *  @date 09/25/2019
  *  @version 1.0
  *  @copyright 2019
@@ -43,7 +43,14 @@ PidController::~PidController() {}
  *	controller block.
  */
 double PidController::compute(double prevValue, double setPoint) {
-return -100;
+double error=setPoint-prevValue; // Calculate error 
+double Pout=kp_*error; // Calculate the proportional term of error
+integral +=error*dt; 
+double Iout=ki_*integral; // Calculate integral proportional term of error
+derivative=(error-prevError)/dt;
+double Dout=kd_*derivative; // Calculate derivative term of error
+double output=Pout+Iout+Dout; // Calculate total error
+return (prevValue+output);
 }
 
 /**
@@ -52,7 +59,7 @@ return -100;
  *   @return double
  */
 double PidController::getkp() {
-return 10;
+return kp_;
 }
 
 /**
@@ -61,7 +68,7 @@ return 10;
  *   @return double
  */
 double PidController::getki() {
-return 10;
+return ki_;
 }
 
 /**
@@ -70,34 +77,37 @@ return 10;
  *   @return double
  */
 double PidController::getkd() {
-return 10;
+return kd_;
 }
 
 /**
  *   @brief Function to update kp_ attribute of class PidController
- *   @param int p
+ *   @param double p
  *   @return boolean
  */
 bool PidController::setkp(double p) {
-return false;
+kp_=p;
+return true;
 }
 
 /**
  *   @brief Function to update ki_ attribute of class PidController
- *   @param int i
+ *   @param double i
  *   @return boolean
  */
 bool PidController::setki(double i) {
-return false;
+ki_=i;
+return true;
 }
 
 /**
  *   @brief Function to update kd_ attribute of class PidController
- *   @param int d
+ *   @param double d
  *   @return boolean
  */
 bool PidController::setkd(double d) {
-return false;
+kd_=d;
+return true;
 }
 
 
