@@ -10,8 +10,8 @@
 
 #include <memory>
 #include <iostream>
-#include "include/pid.h"
-#include "include/basePID.h"
+#include "pid.hpp"
+#include "basePID.hpp"
 
 /**
  *  @brief Main function to call methods
