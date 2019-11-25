@@ -5,7 +5,7 @@ add_executable(
     main.cpp
     gmockCall.h
     mockBasePID.h
-    testNew.cpp
+    test.cpp
     ../app/pid.cpp
 )
 
