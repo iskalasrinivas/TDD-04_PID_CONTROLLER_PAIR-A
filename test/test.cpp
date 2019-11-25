@@ -1,64 +1,108 @@
 /**
  *  @copyright 2019
  *  @copyright GNU Public License
- *  @file  test.cpp
- *  Part - 1
- *  @author Sandeep Kota Sai Pavan-driver
- *  @author Raj Prakash Shinde-navigator
- *  Part - 2
- *  @author  Raja Iskala - driver
- *  @author Yashaarth Todi-navigator 
- *  @date  09/25/2019
+ *  @file test.cpp
+ *  @author Raja Srinivas Iskala.
+ *  @date 11/24/2019
  *  @version 1.0
- *  @brief Unit test cases for testing the methods
+ *  @brief  Implementation of gmock framework for unit testing.
  */
 
-#include <gtest/gtest.h>
-#include <cstdlib>
-#include <memory>
+#include <iostream>
+#include "gtest/gtest.h"
+#include "gmock/gmock.h"
+#include "mockBasePID.h"
+#include "gmockCall.h"
 #include "pid.hpp"
-
-std::shared_ptr<PidController> test;
+#include "basePID.hpp"
 
 /**
-*   @brief A unit test to check the output velocity
-*   in 1st cycle
-*   
-*/
-TEST(PidController, testformulae) {
-test = std::make_shared<PidController>();
-ASSERT_EQ(test->compute(10, 30), 34.0008);
+ *@brief Cases to test setting of kp gain by the mocked class
+ *and the derived class
+ *@param none
+ *@return none
+ */
+TEST(GmockCall, setkpTest) {
+  PidController pidController;
+  std::unique_ptr<MockBasePID> pidObject(new MockBasePID);;
+  std::unique_ptr<GmockCall> gmock;
+
+  // expect a call of the mocked class and should return true
+  ON_CALL(*pidObject, setkp(1)).WillByDefault(::testing::Return(true));
+  gmock->setKP(std::move(pidObject));
+
+  // check if the value is set properly
+  EXPECT_TRUE(pidController.setkp(1));
 }
 
 /**
-*  @brief A unit test to check if the output velocity
-*  is positive
-*
-*/
-TEST(PidController, testVelocitySign) {
-test = std::make_shared<PidController>();
-EXPECT_GT(test->compute(10, 30), 0);
+ *@brief Cases to test setting of ki gain by the mocked class
+ *and the derived class
+ *@param none
+ *@return none
+ */
+TEST(GmockCall, setkiTest) {
+  PidController pidController;
+  std::unique_ptr<MockBasePID> pidObject = std::make_unique<MockBasePID>();
+  std::unique_ptr<GmockCall> gmock;
+
+  // expect a call of the mocked class and should return true
+  ON_CALL(*pidObject, setki(1)).WillByDefault(::testing::Return(true));
+  gmock->setKP(std::move(pidObject));
+
+  // check if the value is set properly
+  EXPECT_TRUE(pidController.setki(1));
 }
 
 /**
-*  @brief A unit test to check get Functions
-*
-*/
-TEST(PidController, testGetFunctions) {
-test = std::make_shared<PidController>();
-EXPECT_LT(test->getkp(), 2);
-EXPECT_LT(test->getki(), 2);
-EXPECT_LT(test->getkd(), 2);
+ *@brief Cases to test setting of kd gain by the mocked class
+ *and the derived class
+ *@param none
+ *@return none
+ */
+TEST(GmockCall, setkdTest) {
+  PidController pidController;
+  std::unique_ptr<MockBasePID> pidObject = std::make_unique<MockBasePID>();
+  std::unique_ptr<GmockCall> gmock;
+
+  // expect a call of the mocked class and should return true
+  ON_CALL(*pidObject, setkd(1)).WillByDefault(::testing::Return(true));
+  gmock->setKP(std::move(pidObject));
+
+  // check if the value is set properly
+  EXPECT_TRUE(pidController.setkd(1));
 }
 
 /**
-*  @brief A unit test to check set Functions
-*
-*/
-TEST(PidController, testSetFunctions) {
-test = std::make_shared<PidController>();
-EXPECT_TRUE(test->setkp(1));
-EXPECT_TRUE(test->setki(1));
-EXPECT_TRUE(test->setkd(1));
+ *@brief Unit test to check if the returned gain
+ *are the initialized gains
+ *@param none
+ *@return none
+ */
+TEST(PIDtest, getGainsTest) {
+  PidController pidController;
+
+  // check if the values set are correct.
+  EXPECT_EQ(0.2, pidController.getkp());
+  EXPECT_EQ(0.02, pidController.getki());
+  EXPECT_EQ(0.002, pidController.getkd());
+}
+
+/**
+ *@brief Cases to test setting of compute PID by the mocked class
+ *and the derived class
+ *@param none
+ *@return none
+ */
+TEST(GmockStatic, computeMethodTest) {
+  PidController pidController;
+  std::unique_ptr<MockBasePID> pidObject = std::make_unique<MockBasePID>();
+  std::unique_ptr<GmockCall> gmock;
+
+  EXPECT_CALL(*pidObject , compute(10, 30)).Times(1).WillOnce(
+      ::testing::Return(34.0008));
+  gmock->computePID(std::move(pidObject));
+
+  ASSERT_EQ(pidController.compute(10, 30), 34.0008);
 }
 
