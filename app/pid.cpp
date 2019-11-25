@@ -14,7 +14,7 @@
  */
 
 #include <iostream>
-#include "pid.hpp"
+#include "include/pid.h"
 
 /**
  *   @brief Constructor for class PidController
