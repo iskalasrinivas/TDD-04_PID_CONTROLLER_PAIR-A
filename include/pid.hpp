@@ -8,8 +8,8 @@
  *  @brief Class definition of PidController
  */
 
-#ifndef INCLUDE_PID_H_
-#define INCLUDE_PID_H_
+#ifndef INCLUDE_PID_HPP_
+#define INCLUDE_PID_HPP_
 
 #include "basePID.hpp"
 
@@ -18,11 +18,10 @@
  *  PID Controller which derives from interface BasePID.
  */
 class PidController : public BasePID {
-
  public:
   double prevError, integral, derivative, dt;
   /**
-   *  @brief Constructor for class PidController
+   *@brief Constructor for class PidController
    */
   PidController();
 
@@ -88,5 +87,5 @@ class PidController : public BasePID {
   double kp_, ki_, kd_;
 };
 
-#endif  // INCLUDE_PID_H_
+#endif  // INCLUDE_PID_HPP_
 
