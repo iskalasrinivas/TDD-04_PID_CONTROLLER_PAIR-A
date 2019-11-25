@@ -1,0 +1,18 @@
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:0:  No copyright message found.  You should have a line: "Copyright [year] <Copyright Owner>"  [legal/copyright] [5]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:36:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:82:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:87:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:163:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:178:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:211:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:220:  Extra space before )  [whitespace/parens] [2]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:314:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:459:  Missing space after ,  [whitespace/comma] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:464:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:470:  Missing space after ,  [whitespace/comma] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:477:  Missing space after ,  [whitespace/comma] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:482:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:488:  Missing space after ,  [whitespace/comma] [3]
+./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp:514:  { should almost always be at the end of the previous line  [whitespace/braces] [4]
+Done processing ./CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp
+Total errors found: 16
